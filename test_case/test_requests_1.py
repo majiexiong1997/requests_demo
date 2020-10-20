@@ -13,4 +13,6 @@ class Test_requests(unittest.TestCase):
     def tearDown(self) -> None:
         pass
     def test_00(self):
-        pass
+        print('01')
+    def test_01(self):
+        assert 1==0

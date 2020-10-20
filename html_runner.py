@@ -639,7 +639,7 @@ class HTMLTestRunner(Template_mixin):
         classes = []
         for n,t,o,e in result_list:
             cls = t.__class__
-            if not rmap.has_key(cls):
+            if not rmap:
                 rmap[cls] = []
                 classes.append(cls)
             rmap[cls].append((n,t,o,e))
@@ -763,13 +763,13 @@ class HTMLTestRunner(Template_mixin):
         if isinstance(o,str):
             # TODO: some problem with 'string_escape': it escape \n and mess up formating
             # uo = unicode(o.encode('string_escape'))
-            uo = o.decode('latin-1')
+            uo = o.encode('latin-1').decode('latin-1')
         else:
             uo = o
         if isinstance(e,str):
             # TODO: some problem with 'string_escape': it escape \n and mess up formating
             # ue = unicode(e.encode('string_escape'))
-            ue = e.decode('latin-1')
+            ue = e.encode('latin-1').decode('latin-1')
         else:
             ue = e
 
