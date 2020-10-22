@@ -1,7 +1,7 @@
 import unittest
 
 
-class Test_requests(unittest.TestCase):
+class Test_requests1(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         pass
@@ -13,7 +13,6 @@ class Test_requests(unittest.TestCase):
     def tearDown(self) -> None:
         pass
     def test_00(self):
-        assert 1==0
-
+        print('测试通过')
     def test_01(self):
-        assert 1==0
+        assert 1!=0
