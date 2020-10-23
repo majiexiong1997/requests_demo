@@ -12,5 +12,7 @@ def get_result_path():
     return path
 
 
+
+
 if __name__ == '__main__':
     print(get_result_path())

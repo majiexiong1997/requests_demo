@@ -11,6 +11,7 @@ import google.protobuf.json_format
 
 def Tostring(data):
     data = data.SerializeToString()
+
     return data
 
 def Fromstring(data):

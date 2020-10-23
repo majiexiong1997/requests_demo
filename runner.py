@@ -8,6 +8,7 @@ from config import getpathinfo
 path = getpathinfo.get_path()
 print(path)
 report_path = os.path.join(path, 'result')
+
 class AllTest:
     def __init__(self):
         global report_path
@@ -22,6 +23,7 @@ class AllTest:
         self.caseList = []
 
 
+
         self.now = time.strftime('%Y-%m-%d %H_%M_%S')
 
 
@@ -33,6 +35,7 @@ class AllTest:
 
             logging.basicConfig(filename=self.log, level=logging.INFO,
                                 format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
         else:
 
             self.result = self.test_dir + '\\result\\' + self.now + '_result.html'
@@ -40,6 +43,7 @@ class AllTest:
 
             logging.basicConfig(filename=self.log, level=logging.INFO,
                                 format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 
     def set_case_list(self):
         """
